@@ -30,8 +30,7 @@ const Speech = () => {
 
   return (
     <Theme id="react-speech-recognition">
-      <StartButton>aiueo
-      </StartButton>
+      <StartButton>開始</StartButton>
       <div>入力: {listening ? "on" : "off"}</div>
       <button
         type="button"
