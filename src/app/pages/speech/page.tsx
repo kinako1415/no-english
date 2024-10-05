@@ -4,6 +4,8 @@ import "regenerator-runtime";
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
+import { Theme } from "@radix-ui/themes";
+import StartButton from "@/app/components/ui/startBotton";
 
 const Speech = () => {
   const [
@@ -27,7 +29,9 @@ const Speech = () => {
   }
 
   return (
-    <div id="react-speech-recognition">
+    <Theme id="react-speech-recognition">
+      <StartButton>aiueo
+      </StartButton>
       <div>入力: {listening ? "on" : "off"}</div>
       <button
         type="button"
@@ -42,7 +46,7 @@ const Speech = () => {
         リセット
       </button>
       <div>{transcript}</div>
-    </div>
+    </Theme>
   );
 };
 
