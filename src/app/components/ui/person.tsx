@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const ImageStyle = styled(Image)`
@@ -14,7 +15,10 @@ const PersonStyle = styled.div`
 `;
 
 export default function Person() {
-  const rand = Math.floor(Math.random() * 3 + 1);
+  const [rand, setRand] = useState(0);
+  useEffect(() => {
+    setRand(Math.floor(Math.random() * 2 + 1));
+  }, []);
 
   return (
     <PersonStyle>
@@ -23,7 +27,7 @@ export default function Person() {
           return (
             <ImageStyle src="/man1.svg" alt="start" width={650} height={650} />
           );
-        } else {
+        } else if (rand == 2) {
           return (
             <ImageStyle
               src="/woman1.svg"

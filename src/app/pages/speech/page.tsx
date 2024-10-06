@@ -48,7 +48,7 @@ const Speech = () => {
       <button type="button" onClick={() => resetTranscript()}>
         リセット
       </button>
-      {/* <div>{transcript}</div> */}
+      <div>{transcript}</div>
     </div>
   );
 };
