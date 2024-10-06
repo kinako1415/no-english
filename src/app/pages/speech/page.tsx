@@ -4,8 +4,8 @@ import "regenerator-runtime";
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
-import { Theme } from "@radix-ui/themes";
 import StartButton from "@/app/components/ui/startBotton";
+import { zenMaruGothic } from "@/app/fonts/zenFont";
 
 const Speech = () => {
   const [
@@ -29,7 +29,7 @@ const Speech = () => {
   }
 
   return (
-    <Theme id="react-speech-recognition">
+    <div id="react-speech-recognition" className={zenMaruGothic.className}>
       <StartButton>開始</StartButton>
       <div>入力: {listening ? "on" : "off"}</div>
       <button
@@ -45,7 +45,7 @@ const Speech = () => {
         リセット
       </button>
       <div>{transcript}</div>
-    </Theme>
+    </div>
   );
 };
 

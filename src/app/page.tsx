@@ -1,15 +1,17 @@
 import Link from "next/link";
 import "@radix-ui/themes/styles.css";
-import { Button, Theme } from "@radix-ui/themes";
+import { Button } from "@radix-ui/themes";
+import { zenMaruGothic } from "./fonts/zenFont";
 
 export default function Home() {
   return (
-    <Theme>
-      <main>
-        <Link href="/pages/speech">
-          <Button>fadsf</Button>
-        </Link>
-      </main>
-    </Theme>
+    <main className={zenMaruGothic.className}>
+      <Link href="/pages/speech">
+        <Button>あいうえお隣の客はよく柿食う客だ</Button>
+      </Link>
+      <div>隣の客はよく柿食う客だ 開始 入力</div>
+      <div>隣の客はよく柿食う客だ 開始 入力</div>
+      <div>隣の客はよく柿食う客だ 開始 入力</div>
+    </main>
   );
 }
