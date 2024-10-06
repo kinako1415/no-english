@@ -1,13 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import "regenerator-runtime";
-import SpeechRecognition, {
-  useSpeechRecognition,
-} from "react-speech-recognition";
+import { useSpeechRecognition } from "react-speech-recognition";
 import StartButton from "@/app/components/ui/startBotton";
 import { zenMaruGothic } from "@/app/fonts/zenFont";
 import StopButton from "@/app/components/ui/stopButton";
-import Image from "next/image";
+
+import Person from "@/app/components/ui/person";
 
 const Speech = () => {
   const [
@@ -37,8 +36,7 @@ const Speech = () => {
       ) : (
         <StartButton>開始</StartButton>
       )}
-      <Image src="/man1.svg" alt="start" width={750} height={750} />
-      <Image src="/woman1.svg" alt="start" width={750} height={750} />
+      <Person />
       <button type="button" onClick={() => resetTranscript()}>
         リセット
       </button>
