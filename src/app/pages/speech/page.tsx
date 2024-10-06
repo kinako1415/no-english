@@ -7,6 +7,12 @@ import { zenMaruGothic } from "@/app/fonts/zenFont";
 import StopButton from "@/app/components/ui/stopButton";
 
 import Person from "@/app/components/ui/person";
+import styled from "styled-components";
+
+const PlayButton = styled.div`
+  position: fixed;
+  z-index: 6;
+`;
 
 const Speech = () => {
   const [
@@ -31,16 +37,18 @@ const Speech = () => {
 
   return (
     <div id="react-speech-recognition" className={zenMaruGothic.className}>
-      {listening ? (
-        <StopButton>停止</StopButton>
-      ) : (
-        <StartButton>開始</StartButton>
-      )}
+      <PlayButton>
+        {listening ? (
+          <StopButton>停止</StopButton>
+        ) : (
+          <StartButton>開始</StartButton>
+        )}
+      </PlayButton>
       <Person />
       <button type="button" onClick={() => resetTranscript()}>
         リセット
       </button>
-      <div>{transcript}</div>
+      {/* <div>{transcript}</div> */}
     </div>
   );
 };

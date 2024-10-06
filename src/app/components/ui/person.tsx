@@ -2,16 +2,22 @@ import Image from "next/image";
 import styled from "styled-components";
 
 const ImageStyle = styled(Image)`
-  position: relative;
+  position: absolute;
   left: -6rem;
   bottom: 0;
+  height: 84%;
+`;
+
+const PersonStyle = styled.div`
+  position: relative;
+  height: 100vh;
 `;
 
 export default function Person() {
   const rand = Math.floor(Math.random() * 3 + 1);
 
   return (
-    <div>
+    <PersonStyle>
       {(() => {
         if (rand == 1) {
           return (
@@ -28,6 +34,6 @@ export default function Person() {
           );
         }
       })()}
-    </div>
+    </PersonStyle>
   );
 }
