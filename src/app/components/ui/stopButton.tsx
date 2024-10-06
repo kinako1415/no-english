@@ -25,9 +25,7 @@ const BottonStyle = styled.div`
 
 export default function StopButton({ children }: { children: string }) {
   return (
-    <BottonStyle
-      onClick={() => SpeechRecognition.startListening({ continuous: true })}
-    >
+    <BottonStyle onClick={() => SpeechRecognition.stopListening()}>
       {children}
       <Image src="/stopMark.svg" alt="start" width={30} height={30} />
     </BottonStyle>
