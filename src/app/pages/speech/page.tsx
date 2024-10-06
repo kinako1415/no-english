@@ -5,6 +5,7 @@ import { useSpeechRecognition } from "react-speech-recognition";
 import StartButton from "@/app/components/ui/startBotton";
 import { zenMaruGothic } from "@/app/fonts/zenFont";
 import StopButton from "@/app/components/ui/stopButton";
+import Comment from "@/app/components/ui/comment";
 
 import Person from "@/app/components/ui/person";
 import styled from "styled-components";
@@ -36,7 +37,7 @@ const Speech = () => {
   }
 
   return (
-    <div id="react-speech-recognition" className={zenMaruGothic.className}>
+    <div>
       <PlayButton>
         {listening ? (
           <StopButton>停止</StopButton>
@@ -44,11 +45,14 @@ const Speech = () => {
           <StartButton>開始</StartButton>
         )}
       </PlayButton>
-      <Person />
-      <button type="button" onClick={() => resetTranscript()}>
-        リセット
-      </button>
-      <div>{transcript}</div>
+      <div className={zenMaruGothic.className}>
+        <Person />
+        <Comment />
+        <button type="button" onClick={() => resetTranscript()}>
+          リセット
+        </button>
+        <div>{transcript}</div>
+      </div>
     </div>
   );
 };
