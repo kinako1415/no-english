@@ -6,6 +6,7 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 import StartButton from "@/app/components/ui/startBotton";
 import { zenMaruGothic } from "@/app/fonts/zenFont";
+import StopButton from "@/app/components/ui/stopButton";
 
 const Speech = () => {
   const [
@@ -31,6 +32,7 @@ const Speech = () => {
   return (
     <div id="react-speech-recognition" className={zenMaruGothic.className}>
       <StartButton>開始</StartButton>
+      <StopButton>停止</StopButton>
       <div>入力: {listening ? "on" : "off"}</div>
       <button
         type="button"
