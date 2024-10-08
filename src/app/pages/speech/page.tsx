@@ -52,11 +52,11 @@ const Speech = () => {
       <ContentsStyle>
         <Person />
         <Comment />
-        <button type="button" onClick={() => resetTranscript()}>
-          リセット
-        </button>
         <div>{transcript}</div>
       </ContentsStyle>
+      <button type="button" onClick={() => resetTranscript()}>
+        リセット
+      </button>
     </div>
   );
 };
