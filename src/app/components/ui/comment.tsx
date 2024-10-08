@@ -6,15 +6,16 @@ const CommentStyle = styled.div`
   /* 吹き出し本体の背景色用 */
   position: relative;
   width: 44rem;
-  height: 16rem;
+  height: 18rem;
   display: inline-block;
   background: #fff;
-  border-radius: 30px;
+  border-radius: 38px;
   padding: 6px 26px;
   font-weight: 400;
   color: #000;
-  border: 10px solid #ffeb0d;
+  border: 12px solid #ffeb0d;
   box-sizing: border-box;
+  margin-bottom: 2rem;
 `;
 
 const ImageStyle = styled(Image)`

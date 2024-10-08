@@ -27,6 +27,7 @@ const StersStyled = styled(Image)`
 `;
 
 const RightContentsStyle = styled.div`
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
 `;

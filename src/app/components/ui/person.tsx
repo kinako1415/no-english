@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const PersonStyle = styled.div`
   height: 100vh;
+  width: 30rem;
   position: relative;
 `;
 
