@@ -15,6 +15,10 @@ const PlayButton = styled.div`
   z-index: 6;
 `;
 
+const ContentsStyle = styled.div`
+  display: flex;
+`;
+
 const Speech = () => {
   const [
     isBrowserSupportsSpeechRecognition,
@@ -37,7 +41,7 @@ const Speech = () => {
   }
 
   return (
-    <div>
+    <div className={zenMaruGothic.className}>
       <PlayButton>
         {listening ? (
           <StopButton>停止</StopButton>
@@ -45,14 +49,14 @@ const Speech = () => {
           <StartButton>開始</StartButton>
         )}
       </PlayButton>
-      <div className={zenMaruGothic.className}>
+      <ContentsStyle>
         <Person />
         <Comment />
         <button type="button" onClick={() => resetTranscript()}>
           リセット
         </button>
         <div>{transcript}</div>
-      </div>
+      </ContentsStyle>
     </div>
   );
 };
