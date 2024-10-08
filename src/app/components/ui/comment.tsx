@@ -4,8 +4,8 @@ import styled from "styled-components";
 
 const CommentStyle = styled.div`
   /* 吹き出し本体の背景色用 */
-  position: relative;
-  left: 26rem;
+  position: absolute;
+  left: 28rem;
   top: 6rem;
   width: 44rem;
   height: 16rem;

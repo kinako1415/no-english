@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import "regenerator-runtime";
+import Image from "next/image";
 import { useSpeechRecognition } from "react-speech-recognition";
 import StartButton from "@/app/components/ui/startBotton";
 import { zenMaruGothic } from "@/app/fonts/zenFont";
@@ -17,6 +18,11 @@ const PlayButton = styled.div`
 
 const ContentsStyle = styled.div`
   display: flex;
+`;
+
+const StersStyled = styled(Image)`
+  position: absolute;
+  left: 0;
 `;
 
 const Speech = () => {
@@ -50,6 +56,7 @@ const Speech = () => {
         )}
       </PlayButton>
       <ContentsStyle>
+        <Image src="/stars.svg" alt="stars" width={660} height={860} />
         <Person />
         <Comment />
         <div>{transcript}</div>
