@@ -10,6 +10,7 @@ import Comment from "@/app/components/ui/comment";
 
 import Person from "@/app/components/ui/person";
 import styled from "styled-components";
+import TrueOrFalse from "@/app/components/ui/trueOrFalse";
 
 const PlayButton = styled.div`
   position: fixed;
@@ -23,6 +24,11 @@ const ContentsStyle = styled.div`
 const StersStyled = styled(Image)`
   position: absolute;
   left: 0;
+`;
+
+const RightContentsStyle = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 const Speech = () => {
@@ -56,10 +62,12 @@ const Speech = () => {
         )}
       </PlayButton>
       <ContentsStyle>
-        <Image src="/stars.svg" alt="stars" width={660} height={860} />
+        <StersStyled src="/stars.svg" alt="stars" width={660} height={800} />
         <Person />
-        <Comment />
-        <div>{transcript}</div>
+        <RightContentsStyle>
+          <Comment />
+          <TrueOrFalse />
+        </RightContentsStyle>
       </ContentsStyle>
       <button type="button" onClick={() => resetTranscript()}>
         リセット

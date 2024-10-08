@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const PersonStyle = styled.div`
   height: 100vh;
-  position: absolute;
+  position: relative;
 `;
 
 const ImageStyle = styled(Image)`
