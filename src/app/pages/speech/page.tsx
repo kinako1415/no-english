@@ -38,12 +38,8 @@ const Speech = () => {
     setBrowserSupportsSpeechRecognition,
   ] = useState(false);
 
-  const {
-    transcript,
-    listening,
-    resetTranscript,
-    browserSupportsSpeechRecognition,
-  } = useSpeechRecognition();
+  const { listening, browserSupportsSpeechRecognition } =
+    useSpeechRecognition();
 
   useEffect(() => {
     setBrowserSupportsSpeechRecognition(browserSupportsSpeechRecognition);
@@ -70,9 +66,6 @@ const Speech = () => {
           <TrueOrFalse />
         </RightContentsStyle>
       </ContentsStyle>
-      <button type="button" onClick={() => resetTranscript()}>
-        リセット
-      </button>
     </div>
   );
 };
