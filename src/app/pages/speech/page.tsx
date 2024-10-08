@@ -3,14 +3,14 @@ import React, { useEffect, useState } from "react";
 import "regenerator-runtime";
 import Image from "next/image";
 import { useSpeechRecognition } from "react-speech-recognition";
-import StartButton from "@/app/components/ui/startBotton";
+import StartButton from "@/app/components/ui/speech/startBotton";
 import { zenMaruGothic } from "@/app/fonts/zenFont";
-import StopButton from "@/app/components/ui/stopButton";
-import Comment from "@/app/components/ui/comment";
+import StopButton from "@/app/components/ui/speech/stopButton";
+import Comment from "@/app/components/ui/speech/comment";
 
-import Person from "@/app/components/ui/person";
+import Person from "@/app/components/ui/speech/person";
 import styled from "styled-components";
-import TrueOrFalse from "@/app/components/ui/trueOrFalse";
+import TrueOrFalse from "@/app/components/ui/speech/trueOrFalse";
 
 const PlayButton = styled.div`
   position: fixed;

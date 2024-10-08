@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { zenMaruGothic } from "./fonts/zenFont";
 import { Theme } from "@radix-ui/themes";
-import styled from "styled-components";
 
 export const metadata: Metadata = {
   title: "Create Next App",
