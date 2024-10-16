@@ -33,7 +33,7 @@ export default function SignUp() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button type="submit">確定</button>
+      <button type="submit">signin</button>
     </form>
   );
 }
