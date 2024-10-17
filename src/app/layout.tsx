@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { zenMaruGothic } from "./fonts/zenFont";
 import { Theme } from "@radix-ui/themes";
+import Header from "./components/ui/header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +16,10 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={zenMaruGothic.className}>
-        <Theme>{children}</Theme>
+        <Theme>
+          <Header />
+          {children}
+        </Theme>
       </body>
     </html>
   );
