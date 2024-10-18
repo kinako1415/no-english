@@ -6,11 +6,11 @@ export default function Home() {
   return (
     <main className={zenMaruGothic.className}>
       <Link href="/pages/speech">
-        <Button>あいうえお隣の客はよく柿食う客だ</Button>
+        <Button>/pages/speech ページへ移動</Button>
       </Link>
-      <div>隣の客はよく柿食う客だ 開始 入力</div>
-      <div>隣の客はよく柿食う客だ 開始 入力</div>
-      <div>隣の客はよく柿食う客だ 開始 入力</div>
+      <Link href="/pages/auth">
+        <Button>/pages/auth ページへ移動</Button>
+      </Link>
     </main>
   );
 }
