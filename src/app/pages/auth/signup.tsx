@@ -1,5 +1,6 @@
 "use client";
 import { supabase } from "@/app/lib/supabase";
+import "@radix-ui/themes/styles.css";
 import { FormEvent, useState } from "react";
 
 export default function SignUp() {

@@ -1,4 +1,6 @@
 "use client";
+import { Button, Flex } from "@radix-ui/themes";
+import Link from "next/link";
 import styled from "styled-components";
 
 const HeaderStyle = styled.header`
@@ -10,6 +12,7 @@ const HeaderStyle = styled.header`
   left: 0;
   right: 0;
   margin: 0 auto;
+  z-index: 100;
 `;
 
 const MenuStyle = styled.div`
@@ -24,11 +27,28 @@ const MenuStyle = styled.div`
   right: 0;
 `;
 
+const MenuContentsStyle = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+
 export default function Header() {
   return (
     <HeaderStyle>
-      <div>logo</div>
+      <Link href="/">
+            <Button>top ページへ移動</Button>
+          </Link>
       <MenuStyle>menu</MenuStyle>
+      <MenuContentsStyle>
+        <Flex>
+          <Link href="/pages/speech">
+            <Button>/pages/speech ページへ移動</Button>
+          </Link>
+          <Link href="/pages/auth">
+            <Button>/pages/auth ページへ移動</Button>
+          </Link>
+        </Flex>
+      </MenuContentsStyle>
     </HeaderStyle>
   );
 }

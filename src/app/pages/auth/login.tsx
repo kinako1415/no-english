@@ -1,6 +1,7 @@
 "use client";
 import { supabase } from "@/app/lib/supabase";
 import { FormEvent, useState } from "react";
+import "@radix-ui/themes/styles.css";
 
 export default function LogIn() {
   const [email, setEmail] = useState("");

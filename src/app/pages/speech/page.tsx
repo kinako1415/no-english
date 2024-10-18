@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import "regenerator-runtime";
+import "@radix-ui/themes/styles.css";
 import Image from "next/image";
 import { useSpeechRecognition } from "react-speech-recognition";
 import StartButton from "@/app/components/ui/speech/startBotton";
